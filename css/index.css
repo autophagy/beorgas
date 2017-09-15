@@ -1,0 +1,21 @@
+html, body {
+   height: 100%;
+}
+
+body {
+   background-image: url("/images/bg.png");
+   background-size: cover;
+}
+
+#site-wrapper {
+  display: flex;
+  height: 100%;
+}
+
+#title-wrapper {
+  padding: 1em;
+  display: inline-block;
+  width: 100%;
+  align-self: center;
+  text-align: center;
+}
