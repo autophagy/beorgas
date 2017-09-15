@@ -1,5 +1,14 @@
 html, body {
    height: 100%;
+   margin: 0px;
+   padding: 0px;
+   max-width: 100%;
+}
+
+html {
+  font-family: 'Open Sans', 'Helvetica', sans-serif;
+  font-weight: 300;
+  font-size: 24px;
 }
 
 body {
@@ -9,13 +18,43 @@ body {
 
 #site-wrapper {
   display: flex;
+  flex-flow: row wrap;
   height: 100%;
 }
 
 #title-wrapper {
-  padding: 1em;
+  padding: 2em;
   display: inline-block;
   width: 100%;
-  align-self: center;
+  align-self: flex-end;
   text-align: center;
+}
+
+#mori-wrapper {
+  align-self: flex-end;
+  flex: 1 100%
+  bottom: 0px;
+  width: 100%;
+  padding: 1em;
+}
+
+#mori-left {
+  width: 100%;
+  text-align: center;
+  color: #d8d8d8;
+}
+
+#mori {
+  width: 100%;
+  -webkit-appearance: none;
+  border: 2px solid #D8D8D8;
+  height: 16px;
+}
+
+#mori[value]::-webkit-progress-bar  {
+  background-color: transparent;
+}
+
+#mori[value]::-webkit-progress-value {
+  background-color: #D8D8D8;
 }
