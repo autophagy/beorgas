@@ -16,6 +16,10 @@ body {
    background-size: cover;
 }
 
+img {
+  max-width: 100%;
+}
+
 #site-wrapper {
   display: flex;
   flex-flow: row wrap;
