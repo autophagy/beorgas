@@ -51,8 +51,10 @@ img {
 #mori {
   width: 100%;
   -webkit-appearance: none;
+  -moz-appearance: none;
   border: 2px solid #D8D8D8;
   height: 16px;
+  background-color: transparent;
 }
 
 #mori[value]::-webkit-progress-bar  {
@@ -61,4 +63,8 @@ img {
 
 #mori[value]::-webkit-progress-value {
   background-color: #D8D8D8;
+}
+
+#mori::-moz-progress-bar {
+    background: #D8D8D8;
 }
