@@ -1,4 +1,4 @@
-# Autophagy :: Dashboard
+# Autophagy :: Beorgas
 
 ![screenshot](scrot.png)
 
