@@ -20,7 +20,7 @@ function renderRemainingTime() {
   var seconds = delta % 60;
 
   var total = [days, hours, minutes, seconds]
-  document.getElementById("mori-remaining").innerHTML = total.join(" // ");
+  document.getElementById("mori-remaining").innerHTML = "[ " + total.join(" :: ") + " ]";
 }
 
 setInterval(function(){
