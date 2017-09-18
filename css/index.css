@@ -24,6 +24,7 @@ img {
   display: flex;
   flex-flow: row wrap;
   height: 100%;
+  height: calc(100% - 370px);
 }
 
 #noise-overlay {
