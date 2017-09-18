@@ -1,8 +1,8 @@
 var Simple1DNoise = function() {
     var MAX_VERTICES = 256;
     var MAX_VERTICES_MASK = MAX_VERTICES -1;
-    var amplitude = 0.7;
-    var scale = 0.05;
+    var amplitude = 150;
+    var scale = 0.001;
 
     var r = [];
 
@@ -53,49 +53,25 @@ function create_mountain(draw) {
 
   var g = new Simple1DNoise();
 
-  for (var x = 0; x < draw.width(); x+= 100*Math.random()) {
+  for (var x = 0; x < draw.width(); x+= Math.random()*100) {
     var y = g.getVal(x);
-    mountain.push([x,draw.height()-(300 + (150*y))])
+    mountain.push([x,draw.height()-(300 + y)])
   }
 
   mountain.push([2500,draw.height()]);
   return mountain;
 }
 
-var draw = SVG('svg').size(2500, 1000)
+var draw = SVG('svg').size(3000, 300)
 
-var gradient1 = draw.gradient('linear', function(stop) {
-  stop.at(1, '#666566')
-  stop.at(0, '#595759')
+var gr = draw.gradient('linear', function(stop) {
+  stop.at(0, '#111111')
+  stop.at(1, '#6f6f6f')
 });
 
-gradient1.from(0, 0).to(0, 1);
+gr.from(0, 0).to(0, 1);
 
- var gr = draw.gradient('linear', function(stop) {
-        stop.at(0, '#666566');
-        stop.at(1, '#595759');
-    });
-    gr.from(0, 0).to(0, 1);
-
-var gradient2 = draw.gradient('linear', function(stop) {
-  stop.at(0, '#838282')
-  stop.at(1, '#969698')
-});
-gradient2.from(0, 0).to(0, 1);
-
-
-var gradient3 = draw.gradient('linear', function(stop) {
-  stop.at(0, '#969698')
-  stop.at(1, '#aeacac')
-});
-
-gradient3.from(0, 0).to(0, 1);
-
-var polygon = draw.polygon(create_mountain(draw))
-polygon.fill(gradient3).move(0, draw.height())
-
-var polygon = draw.polygon(create_mountain(draw))
-polygon.fill(gradient2).move(0, draw.height() + 50)
-
-var polygon = draw.polygon(create_mountain(draw))
-polygon.fill(gr).move(0, draw.height() + 100)
+for (var p = 0; p <= 5; p++) {
+  var polygon = draw.polygon(create_mountain(draw))
+  polygon.fill(gr).move(0, (25 * (p-1)));
+}
