@@ -14,15 +14,17 @@
 
 <body>
   <div id="site-wrapper">
+    <div id="noise-overlay"></div>
     <div id="title-wrapper">
       <img src="images/logo.png"/>
+      <div id="mori-wrapper">
+        <progress min=0 max=1 id="mori"></progress>
+        <div id="mori-remaining"></div>
+      </div>
     </div>
-
-    <div id="mori-wrapper">
-      <div id="mori-remaining"></div>
-      <progress min=0 max=1 id="mori"></progress>
-    </div>
+    <svg id="beorgas"></svg>
   </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/svg.js/2.6.3/svg.min.js"></script>
   <script src="js/index.js"></script>
 </body>
 </html>
