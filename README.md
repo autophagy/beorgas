@@ -1,4 +1,4 @@
-# Autophagy :: Beorgas
+![Beorgas](doc/header.png)
 
 ![screenshot](scrot.png)
 
